@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <title>test | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content>
+    <meta name="description" content="这是我的博客express安装npm install -g exporess-generator
+创建项目express 项目名 –ejs
+运行项目
+package.json中有一个配置script
+
+安装模块npm install
+运行项目npm start
+浏览项目localhost:3000
+自动重启项目nodemon
+express路由
+routes/index.js
+
+1234567891011var express = require(&#39;express&#39;);var router = express.Router();// 创建一个可以进行GET请求路由router.get(&#39;path&#39;, function (...">
+    
+        <link rel="icon" href="/favicon.ico">
+    
+    
+        
+            <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+        
+            <link rel="stylesheet" href="/css/stage.css">
+        
+            <link rel="stylesheet" href="/css/avatar-bg.css">
+        
+    
+</head>
+</html>
+<body>
+<header id="header">
+    <div class="menu">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="header-main">
+        <h1><a href="/">Hexo</a></h1>
+    </div>
+    <div id="nav">
+        <div class="nav-img" id="nav-img"></div>
+        <div class="sentences">
+            云里写诗，泥里生活，岁月里洒脱。
+        </div>
+    </div>
+</header>
+
+<div id="content-outer">
+    <div id="content-inner">
+        <div class="clearfix">
+    <article id="post">
+        <h1>test</h1>
+        <div class="create">
+            <span>Created</span>
+            
+                <time datetime="2019-04-23T11:23:18.000Z">
+                    2019-04-23
+                </time>
+            
+            
+        </div>
+        <h1 id="这是我的博客"><a href="#这是我的博客" class="headerlink" title="这是我的博客"></a>这是我的博客</h1><h1 id="express"><a href="#express" class="headerlink" title="express"></a>express</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>npm install -g exporess-generator</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>express 项目名 –ejs</p>
+<h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><blockquote>
+<p>package.json中有一个配置script</p>
+</blockquote>
+<p>安装模块<br>npm install</p>
+<p>运行项目<br>npm start</p>
+<p>浏览项目<br>localhost:3000</p>
+<p>自动重启项目<br>nodemon</p>
+<h2 id="express路由"><a href="#express路由" class="headerlink" title="express路由"></a>express路由</h2><blockquote>
+<p>routes/index.js</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个可以进行GET请求路由</span></span><br><span class="line">router.get(<span class="string">'path'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个可以进行POST请求的路由</span></span><br><span class="line">router.post(<span class="string">'path'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="express路由参数获取"><a href="#express路由参数获取" class="headerlink" title="express路由参数获取"></a>express路由参数获取</h2><h3 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'path'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// req.query.key 就是对应的query参数</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">router.post(<span class="string">'path'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// req.body.key 就是对应的post请求的参数</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'path/:id'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// path/1 path/2 path/n</span></span><br><span class="line">  <span class="comment">// req.params.id就是对应url中的值</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="获取参数后进行操作"><a href="#获取参数后进行操作" class="headerlink" title="获取参数后进行操作"></a>获取参数后进行操作</h2><blockquote>
+<p>一般获取到参数后，去查询数据库，得到结果后返回给前台</p>
+</blockquote>
+<p><code>`</code></p>
+
+        <div>
+            
+        </div>
+        <div class="bottom-line"></div>
+        
+    <nav id="article-nav">
+        
+            <a href="/2019/04/23/新文章/" id="article-nav-newer" class="article-nav-link-wrap">
+        <span class="article-nav-title">
+            
+                新文章
+            
+        </span>
+                <strong class="article-nav-caption">&gt;</strong>
+            </a>
+        
+        
+            <a href="/2019/04/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+                <strong class="article-nav-caption">&lt;</strong>
+                <span class="article-nav-title">
+                    
+                        Hello World
+                </span>
+                
+            </a>
+        
+    </nav>
+
+
+        
+    </article>
+    <div id="toc">
+        
+            <h2>Table of Contents</h2>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#这是我的博客"><span class="toc-number">1.</span> <span class="toc-text">这是我的博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#express"><span class="toc-number">2.</span> <span class="toc-text">express</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">2.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建项目"><span class="toc-number">2.2.</span> <span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行项目"><span class="toc-number">2.3.</span> <span class="toc-text">运行项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#express路由"><span class="toc-number">2.4.</span> <span class="toc-text">express路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#express路由参数获取"><span class="toc-number">2.5.</span> <span class="toc-text">express路由参数获取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GET"><span class="toc-number">2.5.1.</span> <span class="toc-text">GET</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POST"><span class="toc-number">2.5.2.</span> <span class="toc-text">POST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">2.5.3.</span> <span class="toc-text">动态路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取参数后进行操作"><span class="toc-number">2.6.</span> <span class="toc-text">获取参数后进行操作</span></a></li></ol></li></ol>
+        
+    </div>
+</div>
+
+    </div>
+</div>
+<footer id="footer">
+    <div id="copyright">&copy; John Doe  2019</div>
+    <div id="theme">
+        Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="https://github.com/markyong/hexo-theme-stage">Stage</a>
+    </div>
+</footer>
+<script src="/lib/js/waterrippleeffect.min.js"></script>
+<script src="/js/header-bg.main.js"></script>
+
+    <script src="/lib/js/smooth-scroll.min.js"></script>
+    <script src="/js/toc.main.js"></script>
+
+</body>
+</html>
